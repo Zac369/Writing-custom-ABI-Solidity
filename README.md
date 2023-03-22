@@ -1,13 +1,5 @@
-# Sample Hardhat Project
+# Writing custom ABI for a super secret contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Custom ABI encoding by taking 2 numbers, converting them to binary then intertwining the bits(one bit from a, one bit from b, one bit from a, etc).
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Solution uses bit shifting to decode the tx.data
